@@ -1,2 +1,36 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Hoja de vida Usuarios</h1>
+
+<% @users.each do |user| %>
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td><%= user.name %></td>
+  </tr>
+  <tr>
+    <td>Correo</td>
+    <td><%= user.email %></td>
+  </tr>
+  <tr>
+    <td>Último Trabajo</td>
+    <td><%= user.jobs %></td>
+  </tr>
+  <tr>
+    <td>Estudios</td>
+    <td><%= user.studies %></td>
+  </tr>
+  <tr>
+    <td>Hobbies</td>
+    <td><%= user.hobbies %></td>
+  </tr>
+  <tr>
+    <td>Descripción</td>
+    <td><%= user.description %></td>
+  </tr>
+  <tr>
+    <td>Comentarios</td>
+    <td><%= user.comments %></td>
+  </tr>
+</table>
+<hr>
+
+<% end %>
